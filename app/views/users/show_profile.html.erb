@@ -1,0 +1,14 @@
+<!-- app/views/users/show_profile.html.erb -->
+
+<h1>プロフィール情報</h1>
+
+<div>
+
+  <%= link_to image_tag(current_user.avatar_url.presence || 'https://rails-02-sample.herokuapp.com/assets/common/default-avatar-7a6cbfd7993e89f24bfc888f4a035a83c6f1428b8bdc47eed9095f2799a40153.png', alt: 'User Avatar', class: 'user-avatar') %>
+  
+  <h2><%= current_user.username %></h2>
+  
+  <p><%= current_user.introduction %></p>
+</div>
+
+<%= link_to '編集', edit_profile_user_path(current_user) %>

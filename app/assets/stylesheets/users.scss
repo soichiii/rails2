@@ -1,0 +1,82 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 39px;
+}
+
+.user-avatar {
+    border-radius: 60px;
+    object-fit: contain;
+    width: 120px;
+}
+
+.edit {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #0071c1;
+    text-decoration: none;
+}
+
+.field {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+label {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    width: 15%;
+}
+
+.adress {
+    margin-bottom: 0;
+    width: 75%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0.375rem 0.75rem;
+    height: 30px;
+}
+
+.value {
+    margin-bottom: 0;
+    width: 75%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0.375rem 0.75rem;
+    height: 30px;
+}
+.image {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.group{
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+}
+
+p {
+    margin-top: 0;
+    font-size: 1rem;
+}

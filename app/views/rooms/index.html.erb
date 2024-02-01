@@ -1,0 +1,17 @@
+<h1>登録済み一覧</h1>
+
+
+<% @rooms.each do |room| %>
+  <div class="room">
+    <% if room.image.attached? %>
+      <%= link_to image_tag(room.image.variant(resize: "300x200")), room %>
+    <% else %>
+      <%= link_to image_tag('default-image-4e0ac6b8d01335b5b22fe6586af13644ae51dddb6aeabf35b9174e80f13cd09d.png'), room %>
+    <% end %>
+    <h2><%= link_to room.name, room %></h2>
+    <p>紹介文:<%= room.detail %></p>
+    <p><%= room.description %></p>
+    <p>宿泊料金: ¥<%= room.price %> /日</p>
+    <p>作成日: <%= room.created_at.strftime("%Y/%m/%d") %></p>
+  </div>
+<% end %>

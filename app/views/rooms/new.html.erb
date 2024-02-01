@@ -1,0 +1,39 @@
+<div class="FormWrapper">
+<section class="FormContainer">
+<h1>施設登録</h1>
+
+% if flash[:notice] %>
+   <p class="notice"><%= flash.now[:notice] %></p>
+
+<%= form_with(model: @room, url: rooms_path, method: :post, local: true) do |form| %>
+  <div class = "RoomsForm__input-group">
+  <%= form.label :name, '施設名' %>
+  <%= form.text_field :name, class: "custom-text-field"  %>
+  </div>
+  <div class = "RoomsForm__input-group">
+  <%= form.label :detail, '施設詳細' %>
+  <%= form.text_area :detail, class: "custom-text-field" %>
+  </div>
+  <div class = "RoomsForm__input-group">
+  <%= form.label :price, '料金' %>
+  <%= form.number_field :price, class: "custom-text-field" %>
+  </div>
+  <div class = "RoomsForm__input-group">
+  <%= form.label :address, '住所' %>
+  <%= form.text_field :address, class: "custom-text-field" %>
+  </div>
+
+  <div class = "RoomsForm__input-group">
+    <%= form.label :avatar, '施設画像' %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '施設を登録する', class: "RoomsForm__button" %>
+  </div>
+  </div>
+<% end %>
+
+<%= link_to 'キャンセル', rooms_path, class: "RoomsForm__button--cancel" %>
+</section>
+</div>

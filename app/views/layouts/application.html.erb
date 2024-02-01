@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reservation</title>
+    <title>ReservationApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,8 +9,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+  <header>
+  <nav>
+  <div class="container-fuild">
+  <a class ="">
+  <%= link_to  '宿泊予約サイト', root_path , class: 'large-link' %>
+  </a>
+  <%= javascript_include_tag 'custom' %>
+  <% if user_signed_in? %>
+  <%= render 'layouts/logged_in_header' %>
+  <% else %>
+  <%= render 'layouts/logged_out_header' %>
+  <% end %>
+  </div>
+  </nav>
+</header>
     <%= yield %>
   </body>
 </html>

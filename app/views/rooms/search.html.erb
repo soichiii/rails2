@@ -1,0 +1,35 @@
+<!-- app/views/rooms/search.html.erb -->
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'search_results', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="search-results-page">
+<h1>検索結果</h1>
+
+<%= form_tag(search_path, method: :get) do %>
+  <label for="area">エリア検索:</label>
+  <%= text_field_tag(:area, params[:area],class: 'search-input') %>
+  <label for="keyword">フリーワード検索:</label>
+  <%= text_field_tag(:keyword, params[:keyword],class: 'search-input') %>
+  <%= submit_tag("検索") %>
+<% end %>
+
+<% if @rooms.any? %>
+  <p>合計件数: <%= @rooms.count %>件の施設が見つかりました。</p>
+  <ul>
+    <% @rooms.each do |room| %>
+      <li>
+        <% if room.image.attached? %>
+          <%= link_to image_tag(room.image.variant(resize: "300x200")), room %>
+        <% else %>
+          <%= link_to image_tag('default-image-4e0ac6b8d01335b5b22fe6586af13644ae51dddb6aeabf35b9174e80f13cd09d.png'), room %>
+        <% end %>
+        <h2><%= link_to room.name, room %></h2>
+        <p>住所: <%= room.address %></p>
+        <p>施設詳細: <%= room.description %></p>
+        <p>宿泊料金: ¥<%= room.price %> /日</p>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>該当する施設はありません。</p>
+<% end %>
+</div>

@@ -1,0 +1,26 @@
+<!-- app/views/users/edit_profile.html.erb -->
+
+<h1>プロフィール編集</h1>
+
+<%= form_for @user, url: update_profile_user_path, method: :patch, html: { multipart: true } do |f| %>
+  <div>
+    <%= f.label :名前 %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div>
+    <%= f.label :avatar, 'アイコン画像' %>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div>
+    <%= f.label :自己紹介 %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.submit '更新する' %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', :back %>

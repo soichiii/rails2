@@ -1,0 +1,28 @@
+<!-- app/views/users/edit.html.erb -->
+
+<h2>アカウント情報編集</h2>
+
+<%= form_for(@user, url: registration_path(@user), method: :put) do |f| %>
+  <%= render 'devise/shared/error_messages', resource: @user %>
+
+  <div class="field">
+    <%= f.label :email, 'メールアドレス' %>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, '新しいパスワード' %>
+    <%= f.password_field :password, autocomplete: 'new-password' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, 'パスワード確認' %>
+    <%= f.password_field :password_confirmation, autocomplete: 'new-password' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '更新' %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', root_path %>

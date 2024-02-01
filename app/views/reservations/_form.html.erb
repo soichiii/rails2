@@ -1,0 +1,25 @@
+<!-- app/views/reservations/_form.html.erb -->
+
+<%= form_with(model: reservation, url: room_reservations_path(@room), local: true) do |form| %>
+   
+
+  <div class="field">
+    <%= form.label :チェックイン %>
+    <%= form.date_field :check_in %>
+  </div>
+
+  <div class="field">
+    <%= form.label :チェックアウト %>
+    <%= form.date_field :check_out %>
+  </div>
+
+  <div class="field">
+    <%= form.label :人数 %>
+    <%= form.number_field :guests %>
+  </div>
+
+  <div class="actions">
+  
+    <%= form.submit :予約する, class: "reserve-button2" %>
+  </div>
+<% end %>
