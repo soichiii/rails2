@@ -2,8 +2,6 @@
 <section class="FormContainer">
 <h1>施設登録</h1>
 
-% if flash[:notice] %>
-   <p class="notice"><%= flash.now[:notice] %></p>
 
 <%= form_with(model: @room, url: rooms_path, method: :post, local: true) do |form| %>
   <div class = "RoomsForm__input-group">
