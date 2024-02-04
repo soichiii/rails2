@@ -1,0 +1,41 @@
+#user-dropdown {
+  /* ここにスタイルを追加 */
+  display: block;
+  top: 100%;
+  left: 0;
+  margin-top: 0.125rem;
+  min-width: 122px;
+  padding: 9px 0;
+  position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+  /* 他のスタイルプロパティを追加 */
+}
+
+/* ドロップダウンメニューの各アイテムにスタイルを適用する */
+#user-dropdown li {
+  /* ここにスタイルを追加 */
+  font-size: 14px;
+    line-height: 18px;
+    padding: 0 8px;
+}
+  /* 他のスタイルプロパティを追加 */
+
+
+/* リンクにスタイルを適用する */
+#user-dropdown li a {
+  /* ここにスタイルを追加 */
+  text-decoration: none;
+  color: black;
+}

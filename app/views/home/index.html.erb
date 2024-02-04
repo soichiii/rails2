@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="FirstView">
+  
+<div class= "FirtviewSerch">
+
+<%= form_tag(search_path, method: :get) do %>
+    <label for="area">エリア検索:</label>
+    <%= text_field_tag(:area, params[:area], class: 'area') %>
+  
+   
+  
+    <%= submit_tag("検索", class: "search-button") %>
+  <% end %>
+<div class= "serch-link">
+<%= link_to "東京の施設を検索", search_path(area: "東京") %>
+<%= link_to "大阪の施設を検索", search_path(area: "大阪") %>
+<%= link_to "京都の施設を検索", search_path(area: "京都") %>
+<%= link_to "札幌の施設を検索", search_path(area: "札幌") %>
+</div>
+</div>
+</div> 
+ </body> 
+ </html>
+
+  

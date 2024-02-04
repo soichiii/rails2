@@ -1,0 +1,16 @@
+
+
+<h2>アカウント情報</h2>
+
+<div class="field">
+  <%= label_tag :email, 'メールアドレス' %>
+  <%= text_field_tag :email, @user.email, disabled: true %>
+</div>
+
+<div class="field">
+  <%= label_tag :password, 'パスワード' %>
+  <%= password_field_tag :password, '*********', disabled: true %>
+</div>
+
+<%= link_to '編集', edit_user_registration_path %>
+<%= link_to '戻る', root_path %>

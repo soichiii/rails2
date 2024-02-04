@@ -1,0 +1,36 @@
+<!-- app/views/users/show.html.erb -->
+<h1>設定</h1>
+<h2>アカウント情報</h2>
+
+<div class="field">
+  <%= label_tag :email, 'メールアドレス' %>
+  <%= text_field_tag :email, @user.email, disabled: true, class: 'adress' %>
+</div>
+
+<div class="field">
+  <%= label_tag :password, 'パスワード' %>
+  <%= password_field_tag :password, '*********', disabled: true, class: 'value' %>
+</div>
+
+<%= link_to '編集', edit_user_registration_path, class: 'edit' %>
+<h2>プロフィール情報</h2>
+
+<div class="image">
+<%= label_tag :avatar, 'アバター画像' %>
+<%= link_to image_tag(current_user.avatar_url.presence || 'https://rails-02-sample.herokuapp.com/assets/common/default-avatar-7a6cbfd7993e89f24bfc888f4a035a83c6f1428b8bdc47eed9095f2799a40153.png', alt: 'User Avatar', class: 'user-avatar') %>
+</div>
+
+<div class="group">
+<%= label_tag :name, '名前' %>
+  <p><%= current_user.username %></p>
+</div> 
+<div class="group"> 
+<%= label_tag :introduction, '自己紹介' %> 
+  <p><%= current_user.introduction %></p>
+</div>
+
+
+<%= link_to '編集', edit_profile_user_path(current_user), class: 'edit' %>
+
+
+
