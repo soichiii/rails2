@@ -41,8 +41,13 @@ class RoomsController < ApplicationController
 
   def search_rooms
     rooms = Room.all
-    rooms = rooms.where("address LIKE ?", "%#{@area}%") if @area.present? && valid_area?
-    rooms = rooms.where("name LIKE ? OR description LIKE ?", "%#{@keyword}%", "%#{@keyword}%") if @keyword.present?
+  
+    # エリア検索
+    rooms = rooms.where("address LIKE ?", "%#{@area}%") if @area.present?
+  
+    # フリーワード検索
+    rooms = rooms.where("name LIKE ? OR detail LIKE ?", "%#{@keyword}%", "%#{@keyword}%") if @keyword.present?
+  
     rooms
   end
 

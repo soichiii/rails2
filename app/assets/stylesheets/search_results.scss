@@ -1,56 +1,57 @@
 /* app/assets/stylesheets/search_results.css */
 
 .search-results-page {
-    /* ここにスタイリングを追加 */
-    /* 例: */
-    background-color: #f7f7f7;
-    padding: 20px;
-  }
-  
-  .search-results-page h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .search-results-page form {
-    margin-bottom: 20px;
-  }
-  
-  .search-results-page label {
-    margin-right: 10px;
-  }
-  
-  .search-results-page ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .search-results-page li {
-    margin-bottom: 30px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .search-results-page img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .search-results-page h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .search-results-page p {
-    margin-bottom: 10px;
-  }
+  /* ここにスタイリングを追加 */
+  /* 例: */
+  background-color: #f7f7f7;
+  padding: 20px;
+}
 
-  .search-input {
-    /* ここにスタイリングを追加 */
-    border: 1px solid #ccc;
-    padding: 8px;
-    width: 200px;
-  }
-  
+.search-results-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-results-page form {
+  margin-bottom: 20px;
+}
+
+.search-results-page label {
+  margin-right: 10px;
+}
+
+.search-results-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results-page li {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.search-results-page img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.search-results-page h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search-results-page p {
+  margin-bottom: 10px;
+}
+
+.search-input {
+  /* ここにスタイリングを追加 */
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 200px;
+}
+
+.serch-link {}
